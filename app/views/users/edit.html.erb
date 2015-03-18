@@ -1,0 +1,7 @@
+<h1>Create a New User</h1>
+
+<form action="/users/<%= @user.id %>/edit" method="post">
+  <label for="username">Username: </label>
+  <input type="text" name="username" value="<%= @user.username %>">
+  <input type="submit" value="Edit User">
+</form>

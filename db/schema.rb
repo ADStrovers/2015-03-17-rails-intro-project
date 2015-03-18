@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150317164953) do
+ActiveRecord::Schema.define(:version => 20150318010904) do
 
   create_table "boxes", :force => true do |t|
     t.text    "color"
@@ -24,18 +24,18 @@ ActiveRecord::Schema.define(:version => 20150317164953) do
   end
 
   create_table "canvases", :force => true do |t|
-    t.text     "name"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text     "name",       :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.text     "username"
     t.text     "name"
     t.text     "password"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text     "username",   :null => false
   end
 
 end
